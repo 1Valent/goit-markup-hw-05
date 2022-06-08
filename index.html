@@ -415,19 +415,56 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="modal-close-btn" data-modal-close>
-            </button>
-            <p></p>
+            <form action="form registration-form" autocomplete="off">
+                <button type="button" class="modal-close-btn" data-modal-close>
+                </button>
+                <h2>Оставьте свои данные, мы вам перезвоним</h2>
+                <div class="form-field">
+                    <label for="name" class="form-label">Имя</label>
+                    <input class="form-input" type="text" name="user-name" id="name" placeholder="Саша Репета"
+                        autofocus />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-name" for="tel">Телефон</label>
+                    <input class="form-input" type="tel" name="tel" id="tel" placeholder="+380-**-000-00-00" />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-name" for="mail">Почта</label>
+                    <input class="form-input" type="email" name="mail" id="mail" autocomplete="on"
+                        placeholder="mail@gmail.com" />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-name" for="comment">Комментарий</label>
+                    <textarea class="" name="comment" id="comment" rows="8" placeholder="Введите текст"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <input class="form-input" type="checkbox" name="policy" id="policy">
+                    <label class="form-name" for="policy">
+                        Соглашаюсь с рассылкой и принимаю Условия договора
+                    </label>
+                </div>
+
+                <button type="submit">Отправить</button>
+            </form>
         </div>
     </div>
     <script>
-        // position fixed - js mode
-        // console.log(document.querySelector(".nav-section").getBoundingClientRect().height);
-        // const { height: pageHeaderHeight } = document
-        //     .querySelector(".nav-section")
-        //     .getBoundingClientRect();
+        // (() => {
+        //     document
+        //         .querySelector('.registration-form')
+        //         .addEventListener('submit', e => {
+        //             e.preventDefault();
 
-        // document.body.style.paddingTop = `${pageHeaderHeight}px`;    
+        //             new FormData(e.currentTarget).forEach((value, name) =>
+        //                 console.log(`${name}: ${value}`),
+        //             );
+        //             e.currentTarget.reset();
+        //         });
+        // })();   
     </script>
     <script src="./js/modal.js"></script>
 </body>
